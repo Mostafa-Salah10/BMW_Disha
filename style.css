@@ -1,0 +1,251 @@
+/* Start globle rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* End globle rules */
+/* Start globle Variables */
+:root{
+    --background-color:#eaeaea;
+    --bluecolor:#1733e3;
+    --graycolor:#222;
+}
+/* End globle rules */
+body{
+    overflow: hidden;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
+    padding:30px 0 ;
+}
+.logo{
+    color: var(--graycolor);
+    font-size: 30px;
+    font-weight: bold;
+    animation: logo 1.5s ease;
+}
+nav ul li{
+    list-style:none;
+    display: inline-block;
+    margin: 0 16px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:gray;
+    font-size: 15px;
+    font-weight:bold;
+    text-transform: capitalize;
+    animation: links 1s ease backwards;
+    display: inline-block;
+    animation-delay: calc(.2s * var(--i));
+}
+.first, nav ul a:hover{
+    color: var(--bluecolor);
+}
+.social a{
+    color: var(--background-color);
+    font-size: 17px;
+    margin: 0 8px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    border:3px solid transparent;
+    transition: .2s;
+    animation: social 1s ease backwards;
+    animation-delay: calc(.2s * var(--i));
+}
+i{
+    transform: rotate(-45deg);
+}
+.social a:hover{
+    border-color:var(--background-color);
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 75px;
+    margin-top: -41px;
+    position: relative;
+}
+.content-left{
+    width: 45%;
+}
+.content-right{
+    width: 50%;
+}
+.content-left h2{
+     color: var(--graycolor);
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-weight: 600;
+    animation: heading2 1s ease 1.3s backwards;
+}
+.content-left h3{
+    margin-bottom: 15px;
+    color: #1733e3;
+    text-transform: capitalize;
+    font-size: 35px;
+    animation: heading3 1s ease 1.7s backwards;
+
+}
+.content-left p{
+    font-weight: bold;
+    color: gray;
+    line-height: 25px;
+    font-size: 15px;
+    animation: para 1s ease 1.9s backwards;
+
+}
+button{
+    margin-top: 20px;
+    background-color: #1733e3;
+    color: #eaeaea;
+    padding: 10px 0;
+    width: 180px;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    animation: butt 1s ease 2.2s backwards;
+}
+button:hover{
+    background-color: transparent;
+    color: var(--bluecolor);
+    border-color: #1733e3;
+}
+.seven{
+    background-color: #1733e3;
+    width: 700px;
+    height: 700px;
+    transform: rotate(45deg);
+    position: absolute;
+    top:-40%;
+    right: -33%;
+    z-index: -1;
+}
+.boxback{
+    background-color: #eaeaea;
+    border: 15px solid var(--bluecolor);
+    width: 370px;
+    height: 370px;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 20%;
+    right: 4%;
+    box-shadow: 0 0 15px var(--graycolor);
+
+}
+.imag img{
+    width: 600px;
+    z-index: 100;
+    position: absolute;
+    right:0;
+    bottom: 22%;
+    animation: bmw 2s ease 1.3s backwards;
+}
+/* Key Frames of Animation*/
+@keyframes logo{
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@keyframes links{
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes social{
+    0%{
+        transform: translate(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+@keyframes heading2{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes heading3{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes para{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes butt{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bmw{
+    0%{
+        transform: translateX(150px) scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
